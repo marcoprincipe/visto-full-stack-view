@@ -5,7 +5,7 @@ import axios from 'axios'
 async function listActiviesAllocations() {
 
     try {
-        const response = await axios.get("http://localhost:8080/visto-full-stack/allocations/list-activies");
+        const response = await axios.get("http://localhost:8081/visto-full-stack/allocations/list-activies");
         return response.data;
     }
     catch(error) {
@@ -19,7 +19,7 @@ async function listActiviesAllocations() {
 async function doAllocation(request) {
 
     try {
-        const response = await axios.post("http://localhost:8080/visto-full-stack/allocations/do-allocation", request);
+        const response = await axios.post("http://localhost:8081/visto-full-stack/allocations/do-allocation", request);
         return response.data;
     }
     catch (error) {
@@ -37,7 +37,7 @@ async function cancelAllocation(idAllocation) {
     };
 
     try {
-        const response = await axios.post("http://localhost:8080/visto-full-stack/allocations/cancel-allocation", request);
+        const response = await axios.post("http://localhost:8081/visto-full-stack/allocations/cancel-allocation", request);
         return response.data;
     }
     catch (error) {
@@ -55,7 +55,7 @@ async function terminateAllocation(idAllocation) {
     };
 
     try {
-        const response = await axios.post("http://localhost:8080/visto-full-stack/allocations/terminate-allocation", request);
+        const response = await axios.post("http://localhost:8081/visto-full-stack/allocations/terminate-allocation", request);
         return response.data;
     }
     catch (error) {
