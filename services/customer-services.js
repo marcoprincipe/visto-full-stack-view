@@ -5,7 +5,8 @@ import axios from 'axios'
 async function listActiviesCustomers() {
 
     try {
-        const response = await axios.get("http://localhost:8081/visto-full-stack/customers/list-activies");
+        const VISTO_API_PORT = process.env.VISTO_API_PORT;
+        const response = await axios.get(`http://localhost:${VISTO_API_PORT}/visto-full-stack/customers/list-activies`);
         return response.data;
     }
     catch (error) {
