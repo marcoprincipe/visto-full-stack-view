@@ -59,8 +59,8 @@ cp $DOCKER_DIR/Dockerfile $DIST_DIR
 echo "Entrando no diretório $DIST_DIR..."
 cd $DIST_DIR
 
-echo "Removendo a imagem docker $PROJECT_NAME:$PROJECT_VERSION..."
-sh -c "exec docker rmi $PROJECT_NAME:$PROJECT_VERSION"
+#echo "Removendo a imagem docker $PROJECT_NAME:$PROJECT_VERSION..."
+#sh -c "exec docker rmi $PROJECT_NAME:$PROJECT_VERSION"
 
 echo "Gerando a imagem do projeto $PROJECT_NAME:$PROJECT_VERSION, por favor aguarde..."
 sh -c "exec docker build -t$PROJECT_NAME:$PROJECT_VERSION ."
