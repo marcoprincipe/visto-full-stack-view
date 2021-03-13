@@ -1,11 +1,14 @@
 import axios from 'axios'
 
+// Define a porta para utilização.
+
+const VISTO_API_PORT = "8083";
+
 // Retorna a lista de alocações ativas.
 
 async function listActiviesAllocations() {
 
     try {
-        const VISTO_API_PORT = process.env.VISTO_API_PORT;
         const response = await axios.get(`http://localhost:${VISTO_API_PORT}/visto-full-stack/allocations/list-activies`);
         return response.data;
     }
@@ -20,7 +23,6 @@ async function listActiviesAllocations() {
 async function doAllocation(request) {
 
     try {
-        const VISTO_API_PORT = process.env.VISTO_API_PORT;
         const response = await axios.post(`http://localhost:${VISTO_API_PORT}/visto-full-stack/allocations/do-allocation`, request);
         return response.data;
     }
@@ -58,7 +60,6 @@ async function terminateAllocation(idAllocation) {
     };
 
     try {
-        const VISTO_API_PORT = process.env.VISTO_API_PORT;
         const response = await axios.post(`http://localhost:${VISTO_API_PORT}/visto-full-stack/allocations/terminate-allocation`, request);
         return response.data;
     }
