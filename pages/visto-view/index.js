@@ -4,9 +4,9 @@ import Table from 'react-bootstrap/Table'
 import React, { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckCircle, faTimesCircle } from '@fortawesome/free-solid-svg-icons'
-import { listActiviesAllocations, cancelAllocation, terminateAllocation } from '../services/allocation-services'
-import ConfirmDialog from '../components/confirm-dialog'
-import EditDialog from '../components/edit-dialog'
+import { listActiviesAllocations, cancelAllocation, terminateAllocation } from '../../services/allocation-services'
+import ConfirmDialog from '../../components/confirm-dialog'
+import EditDialog from '../../components/edit-dialog'
 
 // Declaração das variáveis globais do módulo.
 
